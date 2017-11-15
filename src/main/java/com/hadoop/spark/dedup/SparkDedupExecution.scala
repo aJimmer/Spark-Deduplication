@@ -8,9 +8,6 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.SparkContext._
 
-/**
- * Created by ted.malaska on 12/6/14.
- */
 object SparkDedupExecution {
   def main(args:Array[String]): Unit = {
     if (args.length == 0) {
