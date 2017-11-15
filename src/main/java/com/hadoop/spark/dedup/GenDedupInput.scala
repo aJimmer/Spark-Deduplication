@@ -6,9 +6,6 @@ import java.util.Random
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{Path, FileSystem}
 
-/**
- * Created by ted.malaska on 12/6/14.
- */
 object GenDedupInput {
   def main(args:Array[String]): Unit = {
     if (args.length == 0) {
@@ -41,7 +38,7 @@ object GenDedupInput {
       writer.write(uniqueId + "," + i + "," + r.nextInt(10000))
       writer.newLine()
     }
-	writer.flush()
+    writer.flush()
     writer.close()
   }
 }
