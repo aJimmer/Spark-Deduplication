@@ -11,7 +11,7 @@
 4. In the Category list, click Session.
 5. In the Host Name field, type hadoop@ec2-54-183-89-163.us-west-1.compute.amazonaws.com
 6. In the Category list, expand Connection > SSH, and then click Auth.
-7. For Private key file for authentication, click Browse and select the private key file (Hadoop.pem) used to launch the cluster.
+7. For Private key file for authentication, click Browse and select the private key file (Hadoop.ppk) used to launch the cluster.
 8. Click Open.
 9. Click Yes to dismiss the security alert.
 
