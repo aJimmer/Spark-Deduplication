@@ -1,3 +1,8 @@
+/*
+ * The following code was referenced from Hadoop Application Architectures
+ * by Mark Grover, Ted Malaska, Jonathan Seidman, and Gwen Shapira
+ */
+
 package com.hadoop.spark.dedup
 
 import java.util.Random
