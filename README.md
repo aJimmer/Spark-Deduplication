@@ -15,12 +15,6 @@
 8. Click Open.
 9. Click Yes to dismiss the security alert.
 
-# Run cluster
-
-* Please clone an existing EMR cluster, So that all configuration are intact.
-* You may need putty to ssh the EMR cluster. 
-* After ssh you can need to run following commands in sequence
-
 ## Install git
 
 `sudo yum install git`
