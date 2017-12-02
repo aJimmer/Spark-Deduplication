@@ -2,7 +2,7 @@
 
 * Please SSH into the EMR master node using the `Hadoop.pem` file provided.
 
-* **For MAC/Linux:** `ssh -i ~/Hadoop.pem hadoop@ec2-54-183-89-163.us-west-1.compute.amazonaws.com`
+* **For MAC/Linux:** `ssh -i Hadoop.pem hadoop@ec2-54-183-89-163.us-west-1.compute.amazonaws.com`
 
 * **For Windows:** 
 1. Download PuTTY.exe to your computer from:
@@ -15,54 +15,24 @@
 8. Click Open.
 9. Click Yes to dismiss the security alert.
 
-## Install git
-
-`sudo yum install git`
-
-`git --version`
-
-## Install Maven
-
-`sudo wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo`
-
-`sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo`
-
-`sudo yum install -y apache-maven`
-
-`mvn --version`
-
-
-## Make project directory
-
-`mkdir project`
-
-`cd project`
-
-
-
-## Clone repo
-
-`git clone https://github.com/aJimmer/Spark-Deduplication.git`
-
 ## Go to
 
 `cd /home/hadoop/project/Spark-Deduplication`
-
-
-
-## Make shell script executable
-
-`chmod a+x run.sh`
 
 ## Run Application
 
 `./run.sh`
 
-## After successfull execution of script run following command to move data from hdfs to local system
+## After successfull execution of script run following commands to move data from hdfs to local system
 
 `hdfs dfs -get /ded_output /home/hadoop/project/Spark-Deduplication`
 
-## Check output data
-`cd ded_output`
+`hdfs dfs -get /ded_input /home/hadoop/project/Spark-Deduplication`
 
-`cat part-00000`
+## Check inout data
+
+`cat ded_input/ded.txt`
+
+## Check output data
+
+`cat ded_output/part-00000`
