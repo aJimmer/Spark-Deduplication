@@ -1,3 +1,20 @@
+# Connect to EMR instance
+
+* Please SSH into the EMR master node using the `Hadoop.pem` file provided.
+
+* **For MAC/Linux:** `ssh -i ~/Hadoop.pem hadoop@ec2-54-183-89-163.us-west-1.compute.amazonaws.com`
+
+* **For Windows:** 
+1. Download PuTTY.exe to your computer from:
+2. http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+3. Start PuTTY.
+4. In the Category list, click Session.
+5. In the Host Name field, type hadoop@ec2-54-183-89-163.us-west-1.compute.amazonaws.com
+6. In the Category list, expand Connection > SSH, and then click Auth.
+7. For Private key file for authentication, click Browse and select the private key file (Hadoop.pem) used to launch the cluster.
+8. Click Open.
+9. Click Yes to dismiss the security alert.
+
 # Run cluster
 
 * Please clone an existing EMR cluster, So that all configuration are intact.
@@ -39,7 +56,7 @@
 
 
 
-## Make shell script executetable
+## Make shell script executable
 
 `chmod a+x run.sh`
 
